@@ -1,0 +1,14 @@
+# https://taskfile.dev
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: 3
+
+tasks:
+  test:
+    desc: run all tests
+    dir: "{{.USER_WORKING_DIR}}"
+    cmd: "go test -cover {{.CLI_ARGS}} ./..."
+  bench:
+    desc: run all benchmarks
+    dir: "{{.USER_WORKING_DIR}}"
+    cmd: "go test -bench . ./..."
