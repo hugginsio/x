@@ -1,3 +1,4 @@
+// Package lru implements a simple LRU cache.
 package lru
 
 import (
