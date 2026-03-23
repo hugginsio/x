@@ -136,6 +136,8 @@ example s another --thing
 		},
 	})
 
+	cmd.AddCommand(newColorsCmd())
+
 	cmd.AddCommand(&cobra.Command{
 		Use:     "throw",
 		Short:   "Throws an error",
