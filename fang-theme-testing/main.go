@@ -8,7 +8,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/charmbracelet/fang"
+	"charm.land/fang/v2"
+	"github.com/hugginsio/x/fraktur"
 	"github.com/spf13/cobra"
 )
 
@@ -149,6 +150,7 @@ example s another --thing
 		context.Background(),
 		cmd,
 		fang.WithNotifySignal(os.Interrupt, os.Kill),
+		fang.WithColorSchemeFunc(fraktur.CharmFangColorSchemeFunc),
 	); err != nil {
 		os.Exit(1)
 	}
